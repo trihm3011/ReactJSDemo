@@ -19,7 +19,7 @@ const renderField = ({ input, label, type = 'text', meta: { touched, error, warn
 
 const Form = ({ handleSubmit, pristine, reset, submitting, onSubmit }) => {
     return (
-        <form className="form-horizontal" onSubmit={handleSubmit(onSubmit)}>
+        <form className="form-horizontal form-add" onSubmit={handleSubmit(onSubmit)}>
             <Field name="address" component={renderField} label="Address" />
             <Field name="ward" component={renderField} label="Ward" />
             <Field name="district" component={renderField} label="District" />

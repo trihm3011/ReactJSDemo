@@ -1,4 +1,8 @@
-.btn-add {
+.btn-export, .btn-add {
   margin: 20px 0 20px 0;
   float: right;
+}
+
+.btn-export{
+  margin-right: 10px;
 }
