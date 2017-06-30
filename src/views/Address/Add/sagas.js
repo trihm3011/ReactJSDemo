@@ -5,6 +5,7 @@ import { startSubmit, stopSubmit } from 'redux-form';
 import { trim } from 'utils';
 import { addressService } from 'services';
 
+// eslint-disable-next-line
 import { SUBMIT_ADDRESS_AJAX, ADD_ADDRESS_FORM_NAME, ADDED_NEW_ADDRESS } from './constants';
 import { REQUEST_ADDRESSES_AJAX } from '../List/constants';
 import { submitAddressSucceeded, submitAddressFailed } from './actions';
@@ -59,8 +60,10 @@ export function* watchAddedAddress() {
     const channel = yield call(createChannel);
 
     while (true) {
+        // TODO.
+        // eslint-disable-next-line
         const address = yield take(channel);
-        // yield put({ type: REQUEST_ADDRESSES_AJAX });
-        yield put({ type: ADDED_NEW_ADDRESS, address: address })
+        yield put({ type: REQUEST_ADDRESSES_AJAX });
+        // yield put({ type: ADDED_NEW_ADDRESS, address: address })
     }
 }

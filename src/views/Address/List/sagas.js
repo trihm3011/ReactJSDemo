@@ -3,7 +3,6 @@ import { values } from 'lodash';
 
 import { addressService } from 'services';
 import { REQUEST_ADDRESSES_AJAX } from './constants';
-import { SUBMIT_ADDRESS_SUCCEEDED } from '../Add/constants';
 
 import { requestAddressesSucceeded, requestAddressesFailed } from './actions';
 

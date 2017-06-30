@@ -1,4 +1,5 @@
 import { REQUEST_ADDRESSES_SUCCEEDED } from './constants';
+// eslint-disable-next-line
 import { ADDED_NEW_ADDRESS } from '../Add/constants';
 
 export function addressesReducer(state = [], action) {
@@ -6,10 +7,9 @@ export function addressesReducer(state = [], action) {
         case REQUEST_ADDRESSES_SUCCEEDED:
             state = action.addresses.slice();
             return state;
-        case ADDED_NEW_ADDRESS:
-            state.push(action.address);
-            console.log('added_new_address', state);
-            return state;
+        // case ADDED_NEW_ADDRESS:
+        // TODO.
+        //     return state;
         default:
             return state;
     }
