@@ -1,0 +1,3 @@
+export const REQUEST_ADDRESSES_AJAX = 'src/views/Address/List/REQUEST_ADDRESSES_AJAX';
+export const REQUEST_ADDRESSES_SUCCEEDED = 'src/views/Address/List/REQUEST_ADDRESSES_SUCCEEDED';
+export const REQUEST_ADDRESSES_FAILED = 'src/views/Address/List/REQUEST_ADDRESSES_FAILED';
