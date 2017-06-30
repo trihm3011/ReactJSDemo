@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
+import './index.css';
 import { selectAddressListContainer } from './selectors';
 import { requestAddressesAjax, requestAddressesSucceeded } from './actions';
 import { Table } from './components';
@@ -21,9 +23,12 @@ class AddressListContainer extends Component {
     render() {
         const { addresses } = this.props;
         return (
-            <div>
-                {addresses.length ? <Table addresses={addresses} /> : null}
-            </div>
+            <section>
+                <Link to="/add" className="btn btn-primary btn-add">Add new address</Link>
+                <section>
+                    {addresses.length ? <Table addresses={addresses} /> : null}
+                </section>
+            </section>
         );
     }
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 
-export const TableRow = ({address: {address, ward, district, city, country}}) => {
+import './Table.css';
+
+export const TableRow = ({ address: { address, ward, district, city, country } }) => {
     return (
         <tr>
             <th scope="row">{address}</th>
@@ -14,9 +16,9 @@ export const TableRow = ({address: {address, ward, district, city, country}}) =>
 
 export const Table = ({ addresses }) => {
     return (
-        <table className="table">
+        <table className="table table-striped">
             <thead>
-                <tr>
+                <tr className="tableHeader">
                     <th>Address</th>
                     <th>Ward</th>
                     <th>District</th>
